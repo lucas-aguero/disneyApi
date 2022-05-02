@@ -1,0 +1,920 @@
+{
+	"info": {
+		"_postman_id": "54fab578-6ef6-4327-8881-cb4ef9ce36a1",
+		"name": "apiDisney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "lucasaguero@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "name_first",
+							"value": "Lucas",
+							"type": "text"
+						},
+						{
+							"key": "name_last",
+							"value": "Aguero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/auth/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"auth",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3033/api/auth/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"auth",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Full List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "lucasaguero@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "lucasaguero@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "name_first",
+							"value": "Lucas",
+							"type": "text"
+						},
+						{
+							"key": "name_last",
+							"value": "Aguero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Full List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1NDkyMywiZXhwaXJlZEF0IjoxNjUxNDU2NzIzfQ.VZYd5PLgUj9MeeQP5XtFV_RtYNx5SVrZ2nTsLVKOM1s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Details By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1NDkyMywiZXhwaXJlZEF0IjoxNjUxNDU2NzIzfQ.VZYd5PLgUj9MeeQP5XtFV_RtYNx5SVrZ2nTsLVKOM1s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters/57",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters",
+						"57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Search & Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1ODA4MSwiZXhwaXJlZEF0IjoxNjUxNDU5ODgxfQ.C2E1atbuBkmGy6RUd02uIEXJ7Vads-ZQwgCkJkum7lU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters?name=mickey&age=21&weight=76&order=asc&movies=100",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "mickey"
+						},
+						{
+							"key": "age",
+							"value": "21"
+						},
+						{
+							"key": "weight",
+							"value": "76"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "movies",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mickey Mouse",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "35",
+							"type": "text"
+						},
+						{
+							"key": "history",
+							"value": "Personaje legendario de Disney",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://www.iconfinder.com/icons/1309122/cream_ice_ice_cream_icecream_mickey_mouse_popsicle_%D0%BC%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D0%BE%D0%B5_icon",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Princesa Ana",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "46",
+							"type": "text"
+						},
+						{
+							"key": "history",
+							"value": "Poderes Magicos",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://www.iconfinder.com/icons/1309122/cream_ice_ice_cream_icecream_mickey_mouse_popsicle_%D0%BC%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D0%BE%D0%B5_icon",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters/99",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3033/api/characters/99",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"characters",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genre Full List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/genre",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genre Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Live Action",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://es.wikipedia.org/wiki/Walt_Disney_Pictures#/media/Archivo:Disney_wordmark.svg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/genre",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genre Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Oldies",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://es.wikipedia.org/wiki/Walt_Disney_Pictures#/media/Archivo:Disney_wordmark.svg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/genre/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"genre",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genre Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3033/api/genre/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"genre",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Full List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1NDA0MSwiZXhwaXJlZEF0IjoxNjUxNDU1ODQxfQ.aGHuBP1TZsotSg2QgC3la7QN_cj_rK1ozRuYa8jAj00",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Details By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1NDA0MSwiZXhwaXJlZEF0IjoxNjUxNDU1ODQxfQ.aGHuBP1TZsotSg2QgC3la7QN_cj_rK1ozRuYa8jAj00",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Search & Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQ1ODA4MSwiZXhwaXJlZEF0IjoxNjUxNDU5ODgxfQ.C2E1atbuBkmGy6RUd02uIEXJ7Vads-ZQwgCkJkum7lU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies?name=snow&order=ascasdasd",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "snow"
+						},
+						{
+							"key": "genre",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "ascasdasd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTM3MjAyNywiZXhwaXJlZEF0IjoxNjUxMzczODI3fQ.p7wW1_CfGeIxiybJh3SEgsWR5N6hMPvKOHZ8jlr6ZgQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Frozen",
+							"description": "\n",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-02-02",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://es.wikipedia.org/wiki/Walt_Disney_Pictures#/media/Archivo:Disney_wordmark.svg",
+							"type": "text"
+						},
+						{
+							"key": "isSeries",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjQsImNyZWF0ZWRBdCI6MTY1MTM2NjUxNSwiZXhwaXJlZEF0IjoxNjUxMzY4MzE1fQ.5v_tlM6WGkbPC0OAkHNGGrDr0X3AfmMadsHCB1VLYAI\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Frozen",
+							"description": "\n",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-02-02",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://es.wikipedia.org/wiki/Walt_Disney_Pictures#/media/Archivo:Disney_wordmark.svg",
+							"type": "text"
+						},
+						{
+							"key": "isSeries",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "iser-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3033/api/movies/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie Genre Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTY1MTQxMjcyMiwiZXhwaXJlZEF0IjoxNjUxNDE0NTIyfQ.7V_SGg-eq8eS0AyRsfneCyocsWtyDxcv3PXwCDCTp6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3033/api/moviegenre/1&2",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"moviegenre",
+						"1&2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
